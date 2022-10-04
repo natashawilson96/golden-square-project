@@ -20,7 +20,7 @@ RSpec.describe Present do
             present = Present.new
             present.wrap(3)
             expect { present.wrap(10) }. to raise_error "A contents has already been wrapped."
-            expect { present.unwrap }. to eq 3
+            expect(present.unwrap). to eq 3
         end
     end        
 end
